@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <div style="border-left: 3px solid #a31317; padding-left: 2px;"><a href="<?php echo URLROOT;?>"><h4 style="color: #a31317;"><strong><?php echo SITENAME?></strong></h4></a></div>
+                             <a href="<?php echo URLROOT;?>"><img src="<?php echo URLROOT;?>/image/logo1.jpg" alt="" style="width: 90px; height: 65px; border-top-left-radius:10px; border-top-right-radius: 10px;"></a>
                         </div>
                     </div>
                     <div class="col-lg-10">
@@ -61,7 +61,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <div style="border-left: 3px solid #a31317; padding-left: 2px;"><a href="<?php echo URLROOT;?>"><h4 style="color: #a31317;"><strong><?php echo SITENAME?></strong></h4></a></div>
+                             <a href="<?php echo URLROOT;?>"><img src="<?php echo URLROOT;?>/image/logo1.jpg" alt="" style="width: 90px; height: 65px; border-top-left-radius:10px; border-top-right-radius: 10px;"></a>
                         </div>
                     </div>
                     <div class="col-lg-10">
@@ -103,13 +103,14 @@
                 </div>
             </div>
         </div>
-          <?php elseif(isLoggedIn() && $_SESSION['role'] == 1):?>
+
+        <?php elseif(isLoggedIn() && $_SESSION['role'] == 1):?>
         <div class="hs-top">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <div style="border-left: 3px solid #a31317; padding-left: 2px;"><a href="<?php echo URLROOT;?>"><h4 style="color: #a31317;"><strong><?php echo SITENAME?></strong></h4></a></div>
+                           <a href="<?php echo URLROOT;?>"><img src="<?php echo URLROOT;?>/image/logo1.jpg" alt="" style="width: 90px; height: 65px; border-top-left-radius:10px; border-top-right-radius: 10px;"></a>
                         </div>
                     </div>
                     <div class="col-lg-10">
@@ -149,7 +150,7 @@
                 <div class="row">
                     <div class="col-lg-2">
                         <div class="logo">
-                            <div style="border-left: 3px solid #a31317; padding-left: 2px;"><a href="<?php echo URLROOT;?>"><h4 style="color: #a31317;"><strong><?php echo SITENAME?></strong></h4></a></div>
+                           <a href="<?php echo URLROOT;?>"><img src="<?php echo URLROOT;?>/image/logo1.jpg" alt="" style="width: 90px; height: 65px; border-top-left-radius:10px; border-top-right-radius: 10px;"></a>
                         </div>
                     </div>
                     <div class="col-lg-10">
