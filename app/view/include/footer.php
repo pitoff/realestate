@@ -1,4 +1,4 @@
- <!-- Footer Section Begin -->
+  <!-- Footer Section Begin -->
     <footer class="footer-section" id="myfooter">
         <div class="container">
             <div class="row">
@@ -7,8 +7,7 @@
                         <div class="fs-logo">
                             <div style="border-left: 3px solid #a31317; padding-left: 2px;"><a href="./index.html"><h4 style="color: #a31317;"><strong><?php echo SITENAME?></strong></h4></a></div>
                         </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                            labore et dolore magna aliqua ut aliquip ex ea</p>
+                        <p>Vosta Agent group... are always ready and available to serve you better, we buy and sell different property types</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
@@ -27,18 +26,18 @@
                     <div class="fs-widget">
                         <h5>Links</h5>
                         <ul>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Create Property</a></li>
-                            <li><a href="#">My Properties</a></li>
-                            <li><a href="#">Register</a></li>
-                            <li><a href="#">Login</a></li>
+                            <li><a href="#myfooter">Contact</a></li>
+                            <li><a href="<?php echo URLROOT;?>/properties/submit>">Create Property</a></li>
+                            <li><a href="<?php echo URLROOT;?>/properties/myproperty">My Properties</a></li>
+                            <li><a href="<?php echo URLROOT;?>/users/agentsignup">Register</a></li>
+                            <li><a href="<?php echo URLROOT;?>/users/logout">Login</a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6">
                     <div class="fs-widget">
                         <h5>Newsletter</h5>
-                        <p>Deserunt mollit anim id est laborum.</p>
+                        <p>Please subscribe to our newsletter.</p>
                         <form action="#" class="subscribe-form">
                             <input type="text" placeholder="Email">
                             <button type="submit" class="site-btn">Subscribe</button>
@@ -48,7 +47,7 @@
             </div>
             <div class="copyright-text">
                 <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | pmTech</i>
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
             </div>
         </div>
