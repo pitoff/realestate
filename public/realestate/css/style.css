@@ -566,7 +566,7 @@ ol {
 }
 
 .search-form-content {
-  overflow: hidden;
+/*   overflow: hidden; */
   margin-bottom: 26px;
 }
 .search-form-content .filter-form {
