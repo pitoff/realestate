@@ -10,7 +10,6 @@
                         <div class="col-lg-12">
                             <div class="pd-title">
                                 <h3 style="text-align: center;"><?php echo $data['viewproperty']->title;?></h3>
-                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
                                 <div class="label">For <?php echo $data['viewproperty']->rent_sale;?></div>
                                 <div class="pt-price"><i>&#8358;</i><?php echo number_format($data['viewproperty']->price, 2) ?><span></span></div>
                                 <p><span class="icon_pin_alt"></span> <strong><?php echo $data['viewproperty']->address;?></strong></p>
@@ -97,7 +96,7 @@
 
                                 </div>
                             </div>
-                            <?php if(($_SESSION['role'] == 2) && ($_SESSION['user_id'] == $data['viewproperty']->agentId)):?>
+                            <?php if((isLoggedIn()) && ($_SESSION['role'] == 2) && ($_SESSION['user_id'] == $data['viewproperty']->agentId)):?>
                                 <button class="btn"><a href="<?php echo URLROOT;?>/properties/updateproperty/<?php echo $data['viewproperty']->propertyId;?>" class="primary-btn">Update</a></button>
                             <?php endif;?>
                         </div>
@@ -112,7 +111,7 @@
                                     <div class="at-title">
                                         <h6><?php echo $data['viewproperty']->surname .' '.$data['viewproperty']->firstname;?></h6>
                                         <span class="fa fa-envelope"> <strong><?php echo $data['viewproperty']->email;?></strong></span>
-                                        <a href="#" class="primary-btn">VIew profile</a>
+                                       <!--  <a href="#" class="primary-btn">VIew profile</a> -->
                                     </div>
                                     <p><?php echo $data['viewproperty']->agent_desc;?></p>
                                     <div class="at-option">
