@@ -51,8 +51,8 @@
                                         <input type="radio" name="radio" value="villa" id="pt-villa">
                                         <span class="checkbox"></span>
                                     </label> -->
-                                    <label for="pt-store">Store
-                                        <input type="radio" name="radio" value="store" id="pt-store">
+                                    <label for="pt-store">Hotel
+                                        <input type="radio" name="radio" value="hotel" id="pt-store">
                                         <span class="checkbox"></span>
                                     </label>
                                     <label for="pt-rest">Resturant
