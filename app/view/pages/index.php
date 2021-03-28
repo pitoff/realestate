@@ -81,7 +81,7 @@
             <div class="row">
                 <div class="col-lg-7">
                     <div class="section-title">
-                        <h4>Where would you rather live?</h4>
+                        <h4>Find a property</h4>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -103,39 +103,39 @@
             </div>
             <div class="search-form-content">
                 <form action="#" class="filter-form">
+                <select class="sm-width" name="property_type">
+                        <option value="">Property Type</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="house">House</option>
+                        <option value="land">Land</option>
+                        <option value="office">Office</option>
+                        <option value="restaurant">Restaurant</option>
+                        <option value="hotel">Hotel</option>
+                    </select>
                     <select class="sm-width">
                         <option value="">Chose The City</option>
                     </select>
                     <select class="sm-width">
                         <option value="">Location</option>
                     </select>
-                    <select class="sm-width">
-                        <option value="">Property Status</option>
-                    </select>
-                    <select class="sm-width">
-                        <option value="">Property Type</option>
-                    </select>
-                    <select class="sm-width">
-                        <option value="">No Of Bedrooms</option>
-                    </select>
-                    <select class="sm-width">
-                        <option value="">No Of Bathrooms</option>
-                    </select>
-                    <div class="room-size-range-wrap sm-width">
-                        <div class="price-text">
-                            <label for="roomsizeRange">Size:</label>
-                            <input type="text" id="roomsizeRange" readonly>
+                    
+                    <div style="margin-top: 5px;">
+                        <div class="room-size-range-wrap sm-width">
+                            <div class="price-text">
+                                <label for="roomsizeRange">Size:</label>
+                                <input type="text" id="roomsizeRange" readonly>
+                            </div>
+                            <div id="roomsize-range" class="slider"></div>
                         </div>
-                        <div id="roomsize-range" class="slider"></div>
-                    </div>
-                    <div class="price-range-wrap sm-width">
-                        <div class="price-text">
-                            <label for="priceRange">Price:</label>
-                            <input type="text" id="priceRange" readonly>
+                        <div class="price-range-wrap sm-width">
+                            <div class="price-text">
+                                <label for="priceRange">Price:</label>
+                                <input type="text" id="priceRange" readonly>
+                            </div>
+                            <div id="price-range" class="slider"></div>
                         </div>
-                        <div id="price-range" class="slider"></div>
+                        <button type="button" class="search-btn sm-width" style="margin-top: 5px;">Search</button>
                     </div>
-                    <button type="button" class="search-btn sm-width">Search</button>
                 </form>
             </div>
 
@@ -152,25 +152,11 @@
                         <h4>Latest PROPERTY</h4> <!-- get property desc limit 6... on click of see more take user to property dashboard -->
                     </div>
                 </div>
-                <div class="col-lg-7">
-                    <div class="property-controls">
-                        <ul>
-                            <li data-filter="all">All</li>
-                            <li data-filter=".apartment">Apartment</li>
-                            <li data-filter=".house">House</li>
-                             <li data-filter=".land">Land</li>
-                            <li data-filter=".office">Office</li>
-                            <li data-filter=".hotel">Hotel</li>
-                            <li data-filter=".restaurant">Restaurant</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
             <div class="row property-filter">
             <?php foreach($data['property'] as $property):?>
 
-                <?php if($property->type == 'house'):?>
-                <div class="col-lg-4 col-md-6 mix house">
+                <div class="col-lg-4 col-md-6 mix ">
                     <div class="property-item">
                         <a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><div class="pi-pic set-bg" data-setbg="<?php echo URLROOT;?>/image/<?php echo $property->image?>">
                             <div class="label">For <?php echo $property->rent_sale?></div>
@@ -199,173 +185,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <?php endif;?>
-
-                <?php if($property->type == 'apartment'):?>
-                <div class="col-lg-4 col-md-6 mix apartment">
-                    <div class="property-item">
-                        <a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><div class="pi-pic set-bg" data-setbg="<?php echo URLROOT;?>/image/<?php echo $property->image?>">
-                            <div class="label">For <?php echo $property->rent_sale?></div>
-                        </div></a>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
-                            <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
-                            <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> <?php echo $property->parlour?></li>
-                                <li><i class="fa fa-bathtub"></i><?php echo $property->bath?></li>
-                                <li><i class="fa fa-bed"></i> <?php echo $property->rooms?></li>
-                                <li><i class="fa fa-cutlery"></i><?php echo $property->kitchen?></li>
-                            </ul>
-                            <div class="pi-agent">
-                                <div class="pa-item">
-                                    <div class="pa-info">
-                                        <img src="<?php echo URLROOT;?>/image/<?php echo $property->agent_image?>" alt="">
-                                        <h6><?php echo $property->surname. ' '.$property->firstname?></h6>
-                                    </div>
-                                    <div class="pa-text">
-                                       <?php echo $property->phonenumber?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endif;?>
-
-                <?php if($property->type == 'land'):?>
-                <div class="col-lg-4 col-md-6 mix land">
-                    <div class="property-item">
-                        <a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><div class="pi-pic set-bg" data-setbg="<?php echo URLROOT;?>/image/<?php echo $property->image?>">
-                            <div class="label">For <?php echo $property->rent_sale?></div>
-                        </div></a>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
-                            <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
-                            <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> <?php echo $property->parlour?></li>
-                                <li><i class="fa fa-bathtub"></i><?php echo $property->bath?></li>
-                                <li><i class="fa fa-bed"></i> <?php echo $property->rooms?></li>
-                                <li><i class="fa fa-cutlery"></i><?php echo $property->kitchen?></li>
-                            </ul>
-                            <div class="pi-agent">
-                                <div class="pa-item">
-                                    <div class="pa-info">
-                                        <img src="<?php echo URLROOT;?>/image/<?php echo $property->agent_image?>" alt="">
-                                        <h6><?php echo $property->surname. ' '.$property->firstname?></h6>
-                                    </div>
-                                    <div class="pa-text">
-                                       <?php echo $property->phonenumber?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endif;?>
-
-                <?php if($property->type == 'office'):?>
-                <div class="col-lg-4 col-md-6 mix office">
-                    <div class="property-item">
-                        <a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><div class="pi-pic set-bg" data-setbg="<?php echo URLROOT;?>/image/<?php echo $property->image?>">
-                            <div class="label">For <?php echo $property->rent_sale?></div>
-                        </div></a>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
-                            <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
-                            <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> <?php echo $property->parlour?></li>
-                                <li><i class="fa fa-bathtub"></i><?php echo $property->bath?></li>
-                                <li><i class="fa fa-bed"></i> <?php echo $property->rooms?></li>
-                                <li><i class="fa fa-cutlery"></i><?php echo $property->kitchen?></li>
-                            </ul>
-                            <div class="pi-agent">
-                                <div class="pa-item">
-                                    <div class="pa-info">
-                                        <img src="<?php echo URLROOT;?>/image/<?php echo $property->agent_image?>" alt="">
-                                        <h6><?php echo $property->surname. ' '.$property->firstname?></h6>
-                                    </div>
-                                    <div class="pa-text">
-                                       <?php echo $property->phonenumber?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endif;?>
-
-                <?php if($property->type == 'hotel'):?>
-                <div class="col-lg-4 col-md-6 mix hotel">
-                    <div class="property-item">
-                        <a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><div class="pi-pic set-bg" data-setbg="<?php echo URLROOT;?>/image/<?php echo $property->image?>">
-                            <div class="label">For <?php echo $property->rent_sale?></div>
-                        </div></a>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
-                            <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
-                            <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> <?php echo $property->parlour?></li>
-                                <li><i class="fa fa-bathtub"></i><?php echo $property->bath?></li>
-                                <li><i class="fa fa-bed"></i> <?php echo $property->rooms?></li>
-                                <li><i class="fa fa-cutlery"></i><?php echo $property->kitchen?></li>
-                            </ul>
-                            <div class="pi-agent">
-                                <div class="pa-item">
-                                    <div class="pa-info">
-                                        <img src="<?php echo URLROOT;?>/image/<?php echo $property->agent_image?>" alt="">
-                                        <h6><?php echo $property->surname. ' '.$property->firstname?></h6>
-                                    </div>
-                                    <div class="pa-text">
-                                       <?php echo $property->phonenumber?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endif;?>
-
-                <?php if($property->type == 'restaurant'):?>
-                <div class="col-lg-4 col-md-6 mix restaurant">
-                    <div class="property-item">
-                        <a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><div class="pi-pic set-bg" data-setbg="<?php echo URLROOT;?>/image/<?php echo $property->image?>">
-                            <div class="label">For <?php echo $property->rent_sale?></div>
-                        </div></a>
-                        <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
-                            <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
-                            <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
-                            <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
-                            <ul>
-                                <li><i class="fa fa-object-group"></i> <?php echo $property->parlour?></li>
-                                <li><i class="fa fa-bathtub"></i><?php echo $property->bath?></li>
-                                <li><i class="fa fa-bed"></i> <?php echo $property->rooms?></li>
-                                <li><i class="fa fa-cutlery"></i><?php echo $property->kitchen?></li>
-                            </ul>
-                            <div class="pi-agent">
-                                <div class="pa-item">
-                                    <div class="pa-info">
-                                        <img src="<?php echo URLROOT;?>/image/<?php echo $property->agent_image?>" alt="">
-                                        <h6><?php echo $property->surname. ' '.$property->firstname?></h6>
-                                    </div>
-                                    <div class="pa-text">
-                                       <?php echo $property->phonenumber?>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <?php endif;?>            
+                </div>       
 
             <?php endforeach;?>
 
@@ -525,96 +345,8 @@
     </section>
     <!-- Categories Section End -->
 
-    <!-- Testimonial Section Begin -->
-    <section class="testimonial-section spad">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="section-title">
-                        <h4>What our client says?</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row testimonial-slider owl-carousel">
-                <div class="col-lg-6">
-                    <div class="testimonial-item">
-                        <div class="ti-text">
-                            <p>Lorem ipsum dolor amet, consectetur adipiscing elit, seiusmod tempor incididunt ut labore
-                                magna aliqua. Quis ipsum suspendisse ultrices gravida accumsan lacus vel facilisis.</p>
-                        </div>
-                        <div class="ti-author">
-                            <div class="ta-pic">
-                                <img src="<?php echo URLROOT;?>/realestate/img/testimonial-author/ta-1.jpg" alt="">
-                            </div>
-                            <div class="ta-text">
-                                <h5>Arise Naieh</h5>
-                                <span>Designer</span>
-                                <div class="ta-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="testimonial-item">
-                        <div class="ti-text">
-                            <p>Lorem ipsum dolor amet, consectetur adipiscing elit, seiusmod tempor incididunt ut labore
-                                magna aliqua. Quis ipsum suspendisse ultrices gravida accumsan lacus vel facilisis.</p>
-                        </div>
-                        <div class="ti-author">
-                            <div class="ta-pic">
-                                <img src="img/testimonial-author/ta-2.jpg" alt="">
-                            </div>
-                            <div class="ta-text">
-                                <h5>Arise Naieh</h5>
-                                <span>Designer</span>
-                                <div class="ta-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="testimonial-item">
-                        <div class="ti-text">
-                            <p>Lorem ipsum dolor amet, consectetur adipiscing elit, seiusmod tempor incididunt ut labore
-                                magna aliqua. Quis ipsum suspendisse ultrices gravida accumsan lacus vel facilisis.</p>
-                        </div>
-                        <div class="ti-author">
-                            <div class="ta-pic">
-                                <img src="img/testimonial-author/ta-1.jpg" alt="">
-                            </div>
-                            <div class="ta-text">
-                                <h5>Arise Naieh</h5>
-                                <span>Designer</span>
-                                <div class="ta-rating">
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                    <i class="fa fa-star"></i>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonial Section End -->
-
     <!-- Contact Section Begin -->
-    <section class="contact-section">
+    <section class="contact-section" style="margin-top: 5px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
