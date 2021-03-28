@@ -1,15 +1,15 @@
 <?php
 	class Properties extends Controller{
 		public function __construct(){
-			if (!isLoggedIn()) {
-				redirect('users/login');
-			}
-
+			
 			$this->propertyModel = $this->model('Property');
 			$this->userModel = $this->model('User');
 		}
 
 		public function submit(){
+			if (!isLoggedIn()) {
+				redirect('users/login');
+			}
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$data = [
 					'title' => trim($_POST['title']),
@@ -74,6 +74,10 @@
 		}
 
 		public function myproperty(){
+			if (!isLoggedIn()) {
+				redirect('users/login');
+			}
+
 			$allproperty = $this->propertyModel->allProperty();
 			$data = [
 				'property' => $allproperty
@@ -91,6 +95,10 @@
 		}
 
 		public function updateproperty($id){
+			if (!isLoggedIn()) {
+				redirect('users/login');
+			}
+
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				$data = [
 					'id' => $id,
@@ -144,6 +152,10 @@
 		}
 
 		public function removeproperty($id){
+			if (!isLoggedIn()) {
+				redirect('users/login');
+			}
+
 			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 				if ($this->propertyModel->deleteProperty($id)) {
 					redirect('properties/myproperty');
