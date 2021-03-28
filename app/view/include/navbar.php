@@ -103,6 +103,45 @@
                 </div>
             </div>
         </div>
+          <?php elseif(isLoggedIn() && $_SESSION['role'] == 1):?>
+        <div class="hs-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <div class="logo">
+                            <div style="border-left: 3px solid #a31317; padding-left: 2px;"><a href="<?php echo URLROOT;?>"><h4 style="color: #a31317;"><strong><?php echo SITENAME?></strong></h4></a></div>
+                        </div>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="ht-widget">
+                            <ul>
+                                <li><i class="icon_mail_alt" style="color: #a31317;"></i> vostan.support@vostan.com</li>
+                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 125-711-811 <span>125-668-886</span></li>
+                            </ul>
+                            <a href="<?php echo URLROOT;?>/users/logout?>" class="hw-btn">Log Out</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="canvas-open">
+                    <span class="icon_menu"></span>
+                </div>
+            </div>
+        </div>
+        <div class="hs-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-9">
+                        <nav class="nav-menu">
+                            <ul>
+                                <li><a href="<?php echo URLROOT;?>/users/dashboard">Properties</a></li>
+                                <li><a href="<?php echo URLROOT;?>/users/agents">Agents</a></li>
+                                <li><a href="<?php echo URLROOT;?>/users/agents">users</a></li>  
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
 
       <?php else:?>
         <div class="hs-top">
