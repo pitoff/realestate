@@ -13,7 +13,11 @@
                 <li><i class="icon_mail_alt" style="color: #a31317;"></i> vostan.support@vostan.com</li>
                 <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> +234805544332211</li>
             </ul>
-            <a href="<?php echo URLROOT;?>/properties/submit" class="hw-btn" style="background: #a31317;">Submit property</a>
+            <?php if(isLoggedIn()):?>
+                <a href="<?php echo URLROOT;?>/users/logout" class="hw-btn" style="background: #a31317;">Log out</a>
+            <?php else:?>
+                <a href="<?php echo URLROOT;?>/properties/submit" class="hw-btn" style="background: #a31317;">Submit property</a>
+            <?php endif;?>
         </div>
         <div class="om-social">
             <a href="#"><i class="fa fa-facebook"></i></a>
