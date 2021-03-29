@@ -4,79 +4,39 @@
     <section class="hero-section">
         <div class="container">
             <div class="hs-slider owl-carousel">
+             <?php foreach($data['carouselProperty'] as $carouselProperty):?>
                 <div class="hs-item set-bg" data-setbg="<?php echo URLROOT;?>/realestate/img/hero/hero-1.jpg">
                     <div class="row">
+                   
                         <div class="col-lg-12">
                             <div class="hc-inner-text">
                                 <div class="hc-text">
-                                    <h4>Balaji Symphony</h4>
-                                    <p><span class="icon_pin_alt"></span> Panvel, Navi Mumbai</p>
-                                    <div class="label">For Rent</div>
-                                    <h5>$ 65.0<span>/month</span></h5>
+                                    <h4><?php echo $carouselProperty->title;?></h4>
+                                    <p><span class="icon_pin_alt"></span><?php echo $carouselProperty->address;?></p>
+                                    <div class="label">For <?php echo $carouselProperty->rent_sale;?></div>
+                                    <h5><i>&#8358;</i><?php echo $carouselProperty->price;?></h5>
                                 </div>
                                 <div class="hc-widget">
                                     <ul>
-                                        <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                        <li><i class="fa fa-bathtub"></i> 03</li>
-                                        <li><i class="fa fa-bed"></i> 05</li>
-                                        <li><i class="fa fa-automobile"></i> 01</li>
+                                        <li><i class="fa fa-object-group"></i> <?php echo $carouselProperty->parlour;?></li>
+                                        <li><i class="fa fa-bathtub"></i> <?php echo $carouselProperty->bath;?></li>
+                                        <li><i class="fa fa-bed"></i> <?php echo $carouselProperty->rooms;?></li>
+                                        <li><i class="fa fa-chef"></i> <?php echo $carouselProperty->kitchen;?></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
+                    
                     </div>
                 </div>
-                <div class="hs-item set-bg" data-setbg="<?php echo URLROOT;?>/realestate/img/hero/hero-2.jpg">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="hc-inner-text">
-                                <div class="hc-text">
-                                    <h4>Balaji Symphony</h4>
-                                    <p><span class="icon_pin_alt"></span> Panvel, Navi Mumbai</p>
-                                    <div class="label">For Rent</div>
-                                    <h5>$ 65.0<span>/month</span></h5>
-                                </div>
-                                <div class="hc-widget">
-                                    <ul>
-                                        <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                        <li><i class="fa fa-bathtub"></i> 03</li>
-                                        <li><i class="fa fa-bed"></i> 05</li>
-                                        <li><i class="fa fa-automobile"></i> 01</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="hs-item set-bg" data-setbg="<?php echo URLROOT;?>/realestate/img/hero/hero-3.jpg">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="hc-inner-text">
-                                <div class="hc-text">
-                                    <h4>Balaji Symphony</h4>
-                                    <p><span class="icon_pin_alt"></span> Panvel, Navi Mumbai</p>
-                                    <div class="label">For Rent</div>
-                                    <h5>$ 65.0<span>/month</span></h5>
-                                </div>
-                                <div class="hc-widget">
-                                    <ul>
-                                        <li><i class="fa fa-object-group"></i> 2, 283</li>
-                                        <li><i class="fa fa-bathtub"></i> 03</li>
-                                        <li><i class="fa fa-bed"></i> 05</li>
-                                        <li><i class="fa fa-automobile"></i> 01</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach;?>
+           
             </div>
         </div>
     </section>
     <!-- Hero Section End -->
 
  <!-- Search Section Begin -->
-
     <section class="search-section spad">
         <div class="container">
             <div class="row">
