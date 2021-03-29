@@ -35,7 +35,13 @@
                             <div class="label">For <?php echo $property->rent_sale?></div>
                         </div></a>
                         <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php if($_SESSION['role'] == 1):?>
+                                <form method="POST" action="<?php echo URLROOT;?>/properties/adminremoveproperty/<?php echo $property->propertyId;?>">
+                                    <button class="btn btn-danger heart-icon" style="color: white;"><span class="fa fa-remove"></span></button>
+                                </form>
+                            <?php else:?>
+                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php endif;?>
                             <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
                             <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
                             <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
@@ -68,7 +74,13 @@
                             <div class="label">For <?php echo $property->rent_sale?></div>
                         </div></a>
                         <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php if($_SESSION['role'] == 1):?>
+                                <form method="POST" action="<?php echo URLROOT;?>/properties/adminremoveproperty/<?php echo $property->propertyId;?>">
+                                    <button class="btn btn-danger heart-icon" style="color: white;"><span class="fa fa-remove"></span></button>
+                                </form>
+                            <?php else:?>
+                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php endif;?>
                             <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
                             <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
                             <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
@@ -101,7 +113,13 @@
                             <div class="label">For <?php echo $property->rent_sale?></div>
                         </div></a>
                         <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php if($_SESSION['role'] == 1):?>
+                                <form method="POST" action="<?php echo URLROOT;?>/properties/adminremoveproperty/<?php echo $property->propertyId;?>">
+                                    <button class="btn btn-danger heart-icon" style="color: white;"><span class="fa fa-remove"></span></button>
+                                </form>
+                            <?php else:?>
+                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php endif;?>
                             <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
                             <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
                             <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
@@ -134,7 +152,13 @@
                             <div class="label">For <?php echo $property->rent_sale?></div>
                         </div></a>
                         <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php if($_SESSION['role'] == 1):?>
+                                <form method="POST" action="<?php echo URLROOT;?>/properties/adminremoveproperty/<?php echo $property->propertyId;?>">
+                                    <button class="btn btn-danger heart-icon" style="color: white;"><span class="fa fa-remove"></span></button>
+                                </form>
+                            <?php else:?>
+                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php endif;?>
                             <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
                             <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
                             <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
@@ -167,7 +191,13 @@
                             <div class="label">For <?php echo $property->rent_sale?></div>
                         </div></a>
                         <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php if($_SESSION['role'] == 1):?>
+                                <form method="POST" action="<?php echo URLROOT;?>/properties/adminremoveproperty/<?php echo $property->propertyId;?>">
+                                    <button class="btn btn-danger heart-icon" style="color: white;"><span class="fa fa-remove"></span></button>
+                                </form>
+                            <?php else:?>
+                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php endif;?>
                             <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
                             <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
                             <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
@@ -200,7 +230,13 @@
                             <div class="label">For <?php echo $property->rent_sale?></div>
                         </div></a>
                         <div class="pi-text">
-                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php if($_SESSION['role'] == 1):?>
+                                <form method="POST" action="<?php echo URLROOT;?>/properties/adminremoveproperty/<?php echo $property->propertyId;?>">
+                                    <button class="btn btn-danger heart-icon" style="color: white;"><span class="fa fa-remove"></span></button>
+                                </form>
+                            <?php else:?>
+                                <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                            <?php endif;?>
                             <div class="pt-price"><i>&#8358;</i><?php echo number_format($property->price, 2) ?><span></span></div>
                             <h5><a href="<?php echo URLROOT;?>/properties/viewproperty/<?php echo $property->propertyId;?>"><?php echo $property->title?></a></h5>
                             <p><span class="icon_pin_alt"></span> <?php echo $property->address?></p>
