@@ -18,6 +18,13 @@
                                     <div class="at-title">
                                         <h6><?php echo $allagents->surname .' '.$allagents->firstname;?></h6>
                                         <span class="fa fa-envelope"> <strong><?php echo $allagents->email;?></strong></span>
+                                        <?php if($_SESSION['role'] == 1):?>
+                                        <form method="POST" action="<?php echo URLROOT;?>/users/removeagent/<?php echo $allagents->id;?>">
+                                            <button class="primary-btn btn" style="color: white;"><span class="fa fa-remove"></span></button>
+                                        </form>
+                                        <?php else:?>
+                                            <a href="#" class="heart-icon"><span class="icon_heart_alt"></span></a>
+                                        <?php endif;?>
                                     </div>
                                     <p><?php echo $allagents->agent_desc;?></p>
                                     <div class="at-option">
