@@ -167,6 +167,22 @@
 			}
 		}
 
+		public function adminremoveproperty($id){
+			if (!isLoggedIn()) {
+				redirect('users/login');
+			}
+
+			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+				if ($this->propertyModel->deleteProperty($id)) {
+					redirect('users/dashboard');
+				}else{
+					die('something went wrong');
+				}
+			}else{
+				$this->view('users/dashboard');
+			}
+		}
+
 
 
 	}
