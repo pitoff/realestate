@@ -134,9 +134,14 @@
                     <div class="col-lg-9">
                         <nav class="nav-menu">
                             <ul>
-                                <li><a href="<?php echo URLROOT;?>/users/dashboard">Properties</a></li>
+                                <li><a href="#">Properties</a>
+                                  <ul class="dropdown">
+                                    <li><a href="<?php echo URLROOT;?>/users/dashboard">All Property</a></li>
+                                    <li><a href="<?php echo URLROOT;?>/properties/submit">Submit Property</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="<?php echo URLROOT;?>/users/agents">Agents</a></li>
-                                <li><a href="<?php echo URLROOT;?>/users/agents">users</a></li>  
+                                <li><a href="<?php echo URLROOT;?>/users/regular">users</a></li>  
                             </ul>
                         </nav>
                     </div>
@@ -159,7 +164,7 @@
                                 <li><i class="icon_mail_alt" style="color: #a31317;"></i> vostan.support@vostan.com</li>
                                 <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> +234805544332211 </li>
                             </ul>
-                            <a href="#" class="hw-btn">Submit property</a>
+                            <a href="<?php echo URLROOT;?>/properties/submit" class="hw-btn">Submit property</a>
                         </div>
                     </div>
                 </div>
