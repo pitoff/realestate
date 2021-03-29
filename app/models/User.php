@@ -96,6 +96,32 @@
 			return $result;
 		}
 
+		public function deleteAgent($id){
+			$this->db->query('DELETE FROM user WHERE id = :id');
+			$this->db->bind(':id', $id);
+			if ($this->db->execute()) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		public function deleteAgentProperty($id){
+			$this->db->query('DELETE FROM property WHERE user_id = :id');
+			$this->db->bind(':id', $id);
+			if ($this->db->execute()) {
+				return true;
+			}else{
+				return false;
+			}
+		}
+
+		public function allregularUsers(){
+			$this->db->query("SELECT * FROM user WHERE role = 3");
+			$result = $this->db->resultSet();
+			return $result;
+		}
+
 
 
 
