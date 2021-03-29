@@ -46,6 +46,12 @@
 			return $result;
 		}
 
+		public function carouselProperty(){
+			$this->db->query("SELECT *, property.user_id as agentId, property.id as propertyId, user.id as userId FROM property INNER JOIN user on user.id = property.user_id ORDER BY property.id DESC LIMIT 3");
+			$result = $this->db->resultSet();
+			return $result;
+		}
+
 		public function viewProperty($id){
 			$this->db->query("SELECT *, property.user_id as agentId, property.id as propertyId, user.id as userId FROM property INNER JOIN user on user.id = property.user_id WHERE property.id = :id");
 			$this->db->bind(':id', $id);
