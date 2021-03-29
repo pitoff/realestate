@@ -15,6 +15,7 @@
 			}
 			
 			$property = $this->propertyModel->allHomeProperty();
+			$carouselProperty = $this->propertyModel->carouselProperty();
 			$phouse = $this->propertyModel->propertyCountHouse();
 			$papartment = $this->propertyModel->propertyCountApartment();
 			$pland = $this->propertyModel->propertyCountLand();
@@ -23,6 +24,7 @@
 			$photel = $this->propertyModel->propertyCountHotel();
 			$data = [
 				'property' => $property,
+				'carouselProperty' => $carouselProperty,
 				'phouse' => $phouse,
 				'papartment' => $papartment,
 				'pland' => $pland,
