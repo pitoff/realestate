@@ -342,5 +342,32 @@
 			$this->view('users/agents', $data);
 		}
 
+		public function removeagent($id){
+			if (!isLoggedIn()) {
+				redirect('users/login');
+			}
+
+			if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+				if ($this->userModel->deleteAgent($id) && $this->userModel->deleteAgentProperty($id)) {
+					redirect('users/agents');
+				}else{
+					die('something went wrong');
+				}
+			}else{
+				$this->view('users/agent');
+			}
+		}
+
+		public function regular(){
+			if (!isLoggedIn()) {
+				redirect('users/login');
+			}
+			$user = $this->userModel->allregularUsers();
+			$data = [
+				'regularusers' => $user
+			];
+			$this->view('users/regular', $data);
+		}
+
 
 	}
