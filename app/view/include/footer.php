@@ -1,11 +1,11 @@
-  <!-- Footer Section Begin -->
+ <!-- Footer Section Begin -->
     <footer class="footer-section" id="myfooter">
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6">
                     <div class="fs-about">
                         <div class="fs-logo">
-                            <div style="border-left: 3px solid #a31317; padding-left: 2px;"><a href="./index.html"><h4 style="color: #a31317;"><strong><?php echo SITENAME?></strong></h4></a></div>
+                            <a href="<?php echo URLROOT;?>"><img src="<?php echo URLROOT;?>/image/logo1.jpg" alt="" style="width: 90px; height: 65px; border-top-left-radius:10px; border-top-right-radius: 10px;"></a>
                         </div>
                         <p>Vosta Agent group... are always ready and available to serve you better, we buy and sell different property types</p>
                     </div>
@@ -66,4 +66,5 @@
     <script src="<?php echo URLROOT;?>/realestate/js/jquery.richtext.min.js"></script>
     <script src="<?php echo URLROOT;?>/realestate/js/image-uploader.min.js"></script>
     <script src="<?php echo URLROOT;?>/realestate/js/main.js"></script>
+    <script src="<?php echo URLROOT;?>/realestate/js/lga.js"></script>
 </body>
