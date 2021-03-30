@@ -21,58 +21,65 @@
     <section class="about-section spad">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-12">
                     <div class="about-text">
                         <div class="at-title">
-                            <h3>Welcom to <?php echo SITENAME;?></h3>
-                            <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an
-                                unknown printer took a galley of type.</p>
-                        </div>
+                            <h3>About company</h3>
+                            <p style="text-align: justify;"> <?php echo SITENAME;?> is a registered Real Estate Company in Nigeria dedicated to providing expedient world
+                            class services and market leading expertise for properties purchase, sales, building and rentals. At <?php echo SITENAME;?>, you will fid whatever you are looking for in your dream home and more, all at arate you can afford. We have relaible and highly qualified Lawyers, Surveyors, and Estate valuers to provide our clients with the best property experience.</p>
+
+                    
+
                         <div class="at-feature">
                             <div class="af-item">
                                 <div class="af-icon">
                                     <img src="../realestate/img/chooseus/chooseus-icon-1.png" alt="">
                                 </div>
-                                <div class="af-text">
-                                    <h6>Find your future home</h6>
-                                    <p>We help you find a new home by offering a smart real estate.</p>
+                                <div class="af-text" style="text-align: justify;">
+                                    <h6>Our mission</h6>
+                                    <p>To modernize and progress the experience of buying and selling of real estate by cultivating a spirit of collaboration, innovation, and Integrity</p>
                                 </div>
                             </div>
                             <div class="af-item">
                                 <div class="af-icon">
                                     <img src="../realestate/img/chooseus/chooseus-icon-2.png" alt="">
                                 </div>
-                                <div class="af-text">
-                                    <h6>Experienced agents</h6>
-                                    <p>Find an agent who knows your market best</p>
+                                <div class="af-text" style="text-align: justify;">
+                                    <h6>Our Vision</h6>
+                                    <p>To be the only TRUE real estate franchise that provides an EXCELLENT and CONSISTENT customer experience at all time.</p>
                                 </div>
                             </div>
                             <div class="af-item">
                                 <div class="af-icon">
                                     <img src="../realestate/img/chooseus/chooseus-icon-3.png" alt="">
                                 </div>
-                                <div class="af-text">
-                                    <h6>Buy or rent homes</h6>
-                                    <p>Millions of houses and apartments in your favourite cities</p>
+                                <div class="af-text" style="text-align: justify;">
+                                    <h6>Our believe</h6>
+
+                                    <p>1. We love what we do and it shows.</p>
+                                    <p>2. We strive to understand our clients’ needs.</p>
+                                    <p>3. Our clients’ needs and best interest are at the heart of everything we do.</p>
+                                    <p>4. Relationships are everything to us; we connect people to their homes and communities.</p>
+                                    <p>5. We conduct ourselves in the highest ethical standards demonstrating honesty and fairness in every decision and action we take.</p>       
+
                                 </div>
                             </div>
                             <div class="af-item">
                                 <div class="af-icon">
                                     <img src="../realestate/img/chooseus/chooseus-icon-4.png" alt="">
                                 </div>
-                                <div class="af-text">
-                                    <h6>List your own property</h6>
-                                    <p>Sign up now and sell or rent your own properties</p>
+                                <div class="af-text" style="text-align: justify;">
+                                    <h6>what we do</h6>
+                                    <p>1. Sign up now and sell or rent your own properties</p>
+                                    <p>2. Our experienced realtors strongly negotiate for you.</p>
+                                    <p>3. We anticipate steps to ensure you are informed and ready to take action.</p>
+                                    <p>4. We guide our Client through what can be a stress-freeprocess in acquiring properties</p>
+
                                 </div>
                             </div>
+                        </div>    
+
                         </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="about-pic set-bg" data-setbg="../realestate/img/about-us.jpg">
-                        <!-- <a href="https://www.youtube.com/watch?v=8EJ3zbKTWQ8" class="play-btn video-popup">
-                            <i class="fa fa-play-circle"></i>
-                        </a> -->
                     </div>
                 </div>
             </div>
