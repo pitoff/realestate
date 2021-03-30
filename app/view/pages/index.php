@@ -50,7 +50,7 @@
                         <div class="cb-item">
                             <label for="cb-rent" class="active">
                                 For Rent
-                                <input type="radio" id="cb-rent">
+                                <input type="radio" name="rent" id="cb-rent">
                             </label>
                         </div>
                         <div class="cb-item">
@@ -63,8 +63,10 @@
                 </div>
             </div>
             <div class="search-form-content">
-                <form action="#" class="filter-form">
-                <select class="sm-width" name="property_type">
+
+                <form action="<?php echo URLROOT;?>/pages/search" method="GET" class="filter-form">
+                <div class="row">
+                    <select class="sm-width form-control col-lg-4" name="property_type">
                         <option value="">Property Type</option>
                         <option value="apartment">Apartment</option>
                         <option value="house">House</option>
@@ -73,21 +75,54 @@
                         <option value="restaurant">Restaurant</option>
                         <option value="hotel">Hotel</option>
                     </select>
-                    <select class="sm-width">
+                   <!--  <select class="sm-width">
                         <option value="">Chose The City</option>
+                    </select> -->
+                    <select class="sm-width form-control col-lg-4" onchange="toggleLGA(this);" name="state" id="state">
+                      <option value="" selected="selected">- State -</option>
+                      <option value="Abia">Abia</option>
+                      <option value="Adamawa">Adamawa</option>
+                      <option value="AkwaIbom">AkwaIbom</option>
+                      <option value="Anambra">Anambra</option>
+                      <option value="Bauchi">Bauchi</option>
+                      <option value="Bayelsa">Bayelsa</option>
+                      <option value="Benue">Benue</option>
+                      <option value="Borno">Borno</option>
+                      <option value="Cross River">Cross River</option>
+                      <option value="Delta">Delta</option>
+                      <option value="Ebonyi">Ebonyi</option>
+                      <option value="Edo">Edo</option>
+                      <option value="Ekiti">Ekiti</option>
+                      <option value="Enugu">Enugu</option>
+                      <option value="FCT">FCT</option>
+                      <option value="Gombe">Gombe</option>
+                      <option value="Imo">Imo</option>
+                      <option value="Jigawa">Jigawa</option>
+                      <option value="Kaduna">Kaduna</option>
+                      <option value="Kano">Kano</option>
+                      <option value="Katsina">Katsina</option>
+                      <option value="Kebbi">Kebbi</option>
+                      <option value="Kogi">Kogi</option>
+                      <option value="Kwara">Kwara</option>
+                      <option value="Lagos">Lagos</option>
+                      <option value="Nasarawa">Nasarawa</option>
+                      <option value="Niger">Niger</option>
+                      <option value="Ogun">Ogun</option>
+                      <option value="Ondo">Ondo</option>
+                      <option value="Osun">Osun</option>
+                      <option value="Oyo">Oyo</option>
+                      <option value="Plateau">Plateau</option>
+                      <option value="Rivers">Rivers</option>
+                      <option value="Sokoto">Sokoto</option>
+                      <option value="Taraba">Taraba</option>
+                      <option value="Yobe">Yobe</option>
+                      <option value="Zamfara">Zamafara</option>
                     </select>
-                    <select class="sm-width">
-                        <option value="">Location</option>
+                    <select class="sm-width select-lga form-control col-lg-4" name="lga" id="lga" required>
+                        
                     </select>
-                    
+                    </div>
                     <div style="margin-top: 5px;">
-                        <div class="room-size-range-wrap sm-width">
-                            <div class="price-text">
-                                <label for="roomsizeRange">Size:</label>
-                                <input type="text" id="roomsizeRange" readonly>
-                            </div>
-                            <div id="roomsize-range" class="slider"></div>
-                        </div>
                         <div class="price-range-wrap sm-width">
                             <div class="price-text">
                                 <label for="priceRange">Price:</label>
@@ -95,7 +130,7 @@
                             </div>
                             <div id="price-range" class="slider"></div>
                         </div>
-                        <button type="button" class="search-btn sm-width" style="margin-top: 5px;">Search</button>
+                        <button type="submit" class="search-btn sm-width" style="margin-top: 5px;">Search</button>
                     </div>
                 </form>
             </div>
