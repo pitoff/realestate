@@ -197,7 +197,7 @@
     /*------------------
         Nice Select
     --------------------*/
-    $('select').niceSelect();
+    // $('select').niceSelect();
 
     /*-------------------
 		Radio Btn
@@ -228,14 +228,14 @@
     $("#price-range").slider({
         range: true,
         min: 0,
-        max: 1500,
+        max: 1000000000,
         step: 100,
-        values: [100, 1000],
+        values: [50000, 500000000],
         slide: function (event, ui) {
-            $("#priceRange").val("[ " + ui.values[0] + " - " + ui.values[1] + " ]" + " $");
+            $("#priceRange").val("[ " + ui.values[0] + " - " + ui.values[1] + " ]" + " #");
         }
     });
-    $("#priceRange").val("[ " + $("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1) + " ]" + " $");
+    $("#priceRange").val("[ " + $("#price-range").slider("values", 0) + " - " + $("#price-range").slider("values", 1) + " ]" + " #");
 
      //Text editor
     $('.texteditor-content').richText();
