@@ -43,4 +43,27 @@
 
 			$this->view('pages/about', $data);
 		}
+
+		public function search(){
+			if (isset($_GET['property_type']) && isset($_GET['state']) && isset($_GET['lga'])) {
+				$data = [
+					'property_type' => $_GET['property_type'],
+					'state' => $_GET['state'],
+					'lga' => $_GET['lga']
+				];
+				$get = $this->propertyModel->getPropertyLike($data['property_type'], $data['state'], $data['lga']);
+				if ($get) {
+					$data = [
+						'property_type' => $_GET['property_type'],
+						'state' => $_GET['state'],
+						'lga' => $_GET['lga'],
+						'get' => $get
+					];
+					$this->view('pages/search', $data);
+				}else{
+					$this->view('pages/search', $data);
+				}
+				$this->view('pages/search', $data);
+			}
+		}
 	}
