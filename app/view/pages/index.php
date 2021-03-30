@@ -200,8 +200,8 @@
                         <div class="section-title">
                             <h4>Why choose us</h4>
                         </div>
-                        <p>Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown
-                            printer took a galley of type and scrambled it to make a type specimen book.</p>
+                        <p>At <?php echo SITENAME;?>, you will fid whatever you are looking for in your dream home and more, all at arate you can afford. 
+                         We have relaible and highly qualified Lawyers, Surveyors, and Estate valuers to provide our clients with the best property experience.</p>
                     </div>
                     <div class="chooseus-features">
                         <div class="cf-item">
