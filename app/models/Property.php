@@ -139,6 +139,21 @@
 			return $count1;
 		}
 
+		public function getPropertyLike($type, $state, $lga){
+			$type = "%$type%";
+			$state = "%$state%";
+			$lga = "%$lga%";
+
+			$this->db->query("SELECT *, property.user_id as agentId, property.id as propertyId, user.id as userId FROM property INNER JOIN user on user.id = property.user_id WHERE property.type LIKE :type AND property.state LIKE :state AND property.lga LIKE :lga");
+			$this->db->bind(':type', $type);
+			$this->db->bind(':state', $state);
+			$this->db->bind(':lga', $lga);
+
+			$result = $this->db->resultSet();
+			return $result;
+
+		}
+
 		
 
 	}
