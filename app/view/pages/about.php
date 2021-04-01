@@ -25,7 +25,7 @@
                     <div class="about-text">
                         <div class="at-title">
                             <h3>About company</h3>
-                            <p style="text-align: justify;"> <?php echo SITENAME;?> is a registered Real Estate Company in Nigeria dedicated to providing expedient world class services and market leading expertise for property purchase, sales, building and rentals. At <?php echo SITENAME;?>, you will find whatever you are looking for in your dream home and more, all at a rate you can afford. We have relaible and highly qualified Lawyers, Surveyors, and Estate valuers to provide our clients with the best property experience.</p>
+                            <p> <?php echo SITENAME;?> is a registered Real Estate Company in Nigeria dedicated to providing expedient world class services and market leading expertise for property purchase, sales, building and rentals. At <?php echo SITENAME;?>, you will find whatever you are looking for in your dream home and more, all at a rate you can afford. We have relaible and highly qualified Lawyers, Surveyors, and Estate valuers to provide our clients with the best property experience.</p>
 
                     
 
