@@ -353,7 +353,7 @@
                             </div>
                             <div class="ci-text">
                                 <h5>Address</h5>
-                                <p>No 22 Okpara marginal avenue, mulumba state</p>
+                                <p>No 5 Igwebuike road, Awka Anambra State</p>
                             </div>
                         </div>
                         <div class="ci-item">
