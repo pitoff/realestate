@@ -7,7 +7,7 @@
                         <div class="fs-logo">
                             <a href="<?php echo URLROOT;?>"><img src="<?php echo URLROOT;?>/image/logo1.jpg" alt="" style="width: 90px; height: 65px; border-top-left-radius:10px; border-top-right-radius: 10px;"></a>
                         </div>
-                        <p>Vosta Agent group... are always ready and available to serve you better, we buy and sell different property types</p>
+                        <p>Vosta Real Estate... are always ready and available to serve you better, we buy and sell different property types</p>
                     </div>
                 </div>
                 <div class="col-lg-2 col-sm-6">
