@@ -118,7 +118,7 @@
                             </div>
                             <div class="ci-text">
                                 <h5>Support</h5>
-                                <p>info@vostangroup.com/p>
+                                <p>info@vostangroup.com</p>
                             </div>
                         </div>
                     </div>
