@@ -1,3 +1,4 @@
+
     <!-- Header Section Begin -->
     <header class="header-section">
       <?php if(isLoggedIn() && $_SESSION['role'] == 2):?>
@@ -12,8 +13,8 @@
                     <div class="col-lg-10">
                         <div class="ht-widget">
                             <ul>
-                               <li><i class="icon_mail_alt" style="color: #a31317;"></i> vostan.support@vostan.com</li>
-                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 125-711-811 <span>125-668-886</span></li>
+                               <li><i class="icon_mail_alt" style="color: #a31317;"></i> info@vostangroup.com</li>
+                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 09023838128 <span>08155994277</span></li>
                             </ul>
                             <a href="<?php echo URLROOT;?>/users/logout" class="hw-btn">Log Out</a>
                         </div>
@@ -67,8 +68,8 @@
                     <div class="col-lg-10">
                         <div class="ht-widget">
                             <ul>
-                                <li><i class="icon_mail_alt" style="color: #a31317;"></i> vostan.support@vostan.com</li>
-                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 125-711-811 <span>125-668-886</span></li>
+                               <li><i class="icon_mail_alt" style="color: #a31317;"></i> info@vostangroup.com</li>
+                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 09023838128 <span>08155994277</span></li>
                             </ul>
                             <a href="<?php echo URLROOT;?>/users/logout?>" class="hw-btn">Log Out</a>
                         </div>
@@ -116,8 +117,8 @@
                     <div class="col-lg-10">
                         <div class="ht-widget">
                             <ul>
-                                <li><i class="icon_mail_alt" style="color: #a31317;"></i> vostan.support@vostan.com</li>
-                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 125-711-811 <span>125-668-886</span></li>
+                               <li><i class="icon_mail_alt" style="color: #a31317;"></i> info@vostangroup.com</li>
+                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 09023838128 <span>08155994277</span></li>
                             </ul>
                             <a href="<?php echo URLROOT;?>/users/logout?>" class="hw-btn">Log Out</a>
                         </div>
@@ -161,8 +162,8 @@
                     <div class="col-lg-10">
                         <div class="ht-widget">
                             <ul>
-                                <li><i class="icon_mail_alt" style="color: #a31317;"></i> vostan.support@vostan.com</li>
-                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> +234805544332211 </li>
+                               <li><i class="icon_mail_alt" style="color: #a31317;"></i> info@vostangroup.com</li>
+                                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 09023838128 <span>08155994277</span></li>
                             </ul>
                             <a href="<?php echo URLROOT;?>/properties/submit" class="hw-btn">Submit property</a>
                         </div>
