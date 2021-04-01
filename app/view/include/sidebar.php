@@ -9,8 +9,8 @@
         <div id="mobile-menu-wrap"></div>
         <div class="om-widget">
             <ul>
-                <li><i class="icon_mail_alt" style="color: #a31317;"></i> vostan.support@vostan.com</li>
-                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> +234805544332211</li>
+                <li><i class="icon_mail_alt" style="color: #a31317;"></i> info@vostangroup.com</li>
+                <li><i class="fa fa-mobile-phone" style="color: #a31317;"></i> 09023838128 <span>08155994277</span></li>
             </ul>
             <?php if(isLoggedIn()):?>
                 <a href="<?php echo URLROOT;?>/users/logout" class="hw-btn" style="background: #a31317;">Log out</a>
